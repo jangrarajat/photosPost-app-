@@ -11,6 +11,11 @@ app.use(express.json())
 
 connectDB();
 
+
+
+const PORT = process.env.PORT || 5000;
+
+
 app.use('/api',user)
 
 
@@ -21,6 +26,6 @@ app.get('/',(req,res)=>{
     res.send('hellow world')
 })
 
-app.listen(process.env.PORT,()=>{
+app.listen(PORT,()=>{
     console.log("server is live")
 })
